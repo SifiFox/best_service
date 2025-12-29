@@ -1,0 +1,62 @@
+/* Явное переопределение шрифтов */
+:root,
+body,
+html,
+div,
+p,
+span,
+button,
+a,
+input,
+textarea,
+select,
+option,
+label,
+[data-radix-popper-content-wrapper],
+.rt-Text,
+.rt-TextArea,
+.rt-Button,
+.rt-DialogDescription,
+.rt-TabsTrigger,
+.rt-SelectTrigger,
+.rt-SelectContent,
+.rt-TableCell,
+.rt-TableColumnHeaderCell,
+.rt-Tooltip,
+.rt-Callout,
+.rt-Card,
+.rt-Quote,
+.rt-Link {
+  font-family:
+    var(--font-involve),
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI (Custom)',
+    Roboto,
+    'Helvetica Neue',
+    'Open Sans (Custom)',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.rt-Heading,
+.rt-DialogTitle {
+  font-family: var(--font-rf-dewi), var(--font-involve), sans-serif;
+}
+
+:where(.radix-themes) {
+  --default-font-family:
+    var(--font-involve), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
+  --heading-font-family: var(--font-rf-dewi), var(--font-involve), sans-serif;
+}

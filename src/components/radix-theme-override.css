@@ -1,0 +1,22 @@
+/* Переопределение стилей Radix UI */
+:where(.radix-themes) {
+  --default-font-family: var(--font-family-base);
+}
+
+.radix-themes {
+  --default-font-family: var(--font-family-base);
+  font-family: var(--font-family-base);
+}
+
+/* Переопределение для компонентов Radix */
+.radix-themes .rt-Text.font-secondary,
+.radix-themes .rt-Heading.font-secondary,
+.radix-themes .oswald {
+  font-family: var(--font-family-secondary) !important;
+}
+
+/* Явное переопределение для Text и Heading */
+.rt-Text.oswald,
+.rt-Heading.oswald {
+  font-family: var(--font-oswald) !important;
+}

@@ -1,0 +1,62 @@
+'use client';
+
+import * as TabsPrimitive from '@radix-ui/react-tabs';
+import * as React from 'react';
+
+import { cn } from '@/lib/utils';
+
+function Tabs({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Root>) {
+  return (
+    <TabsPrimitive.Root
+      className={cn('flex flex-col gap-2', className)}
+      data-slot="tabs"
+      {...props}
+    />
+  );
+}
+
+function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {
+  return (
+    <TabsPrimitive.List
+      className={cn(
+        'text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px]',
+        className
+      )}
+      data-slot="tabs-list"
+      {...props}
+    />
+  );
+}
+
+function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
+  return (
+    <TabsPrimitive.Trigger
+      className={cn(
+        'text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-primary [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-current',
+        className
+      )}
+      data-slot="tabs-trigger"
+      {...props}
+    />
+  );
+}
+
+function TabsContent({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Content>) {
+  return (
+    <TabsPrimitive.Content
+      className={cn('flex-1 outline-none', className)}
+      data-slot="tabs-content"
+      {...props}
+    />
+  );
+}
+
+function TabsSeparator({ className }: { className?: string }) {
+  return (
+    <div className={cn('flex items-center justify-center', className)}>
+      <div className="bg-border h-full w-px" />
+    </div>
+  );
+}
+
+export { Tabs, TabsContent, TabsList, TabsSeparator, TabsTrigger };
